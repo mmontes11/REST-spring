@@ -1,5 +1,6 @@
 package utils;
 
+import java.awt.Color;
 import java.util.Random;
 
 import classes.Chart;
@@ -21,6 +22,15 @@ public class ChartUtils {
 	    Random rand = new Random();
 	    int randomNum = rand.nextInt((max - min) + 1) + min;
 	    return randomNum;
+	}
+	
+	public static String randomColor (){
+		Random r = new Random();
+        Color c = new Color(r.nextInt(256),r.nextInt(256),r.nextInt(256),r.nextInt(256));
+        
+		String hexColor = String.format("#%02x%02x%02x", c.getRed(), c.getGreen(), c.getBlue());
+		
+		return hexColor;
 	}
 
 }
