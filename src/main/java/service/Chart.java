@@ -1,35 +1,29 @@
 package service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import utils.ChartUtils;
+
 
 public class Chart {
 	
-	private List<Integer> data = new ArrayList<Integer>();
-	
-	public Chart (List<Integer> data){
-		this.data = data;
+	private String type;
+	private static String[] chartTypes = 
+			new String[]{"line","spline","area","areaspline","column","bar","pie","scatter"};
+
+	public Chart(String type) {
+		this.type = type;
 	}
 	
-	public Chart (int size, int min, int max){
-		data.clear();
-		for (int i = 0; i<size ; i++){
-			data.add(randomNum(min, max));
-		}
+	public Chart() {
+		int index = ChartUtils.randomNum(0, Chart.chartTypes.length - 1);
+		this.type = Chart.chartTypes[index];
 	}
 
-	public List<Integer> getData() {
-		return data;
+	public String getType() {
+		return type;
 	}
 
-	public void setData(List<Integer> data) {
-		this.data = data;
+	public void setType(String type) {
+		this.type = type;
 	}
 	
-	private static int randomNum (int min, int max) {
-	    Random rand = new Random();
-	    int randomNum = rand.nextInt((max - min) + 1) + min;
-	    return randomNum;
-	}
 }
