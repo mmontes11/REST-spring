@@ -1,4 +1,4 @@
-package service;
+package classes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,10 +9,10 @@ public class Serie {
 	private String name;
 	private List<Integer> data = new ArrayList<Integer>();
 
-	public Serie(String name,int size, int min, int max){
+	public Serie(String name,int numXaxis, int min, int max){
 		this.name = name;
 		this.data.clear();
-		for (int i = 0; i<size ; i++){
+		for (int i = 0; i<numXaxis ; i++){
 			this.data.add(ChartUtils.randomNum(min, max));
 		}
 	}

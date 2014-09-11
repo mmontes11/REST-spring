@@ -1,4 +1,4 @@
-package service;
+package classes;
 
 import utils.ChartUtils;
 
