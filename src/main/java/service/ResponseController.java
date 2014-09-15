@@ -2,6 +2,7 @@ package service;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import utils.ChartUtils;
@@ -11,7 +12,7 @@ import classes.Response;
 public class ResponseController {
 
 	@RequestMapping("/randomChart")
-	public Response randomChart 
+	public @ResponseBody Response randomChart 
 	(@RequestParam(value="numXaxis", required=true, defaultValue="3") int numXaxis,
 	@RequestParam(value="numYaxis", required=true, defaultValue="3") int numYaxis,		
 	@RequestParam(value="min", required=false, defaultValue="0") int min,
