@@ -19,4 +19,9 @@ public class ResponseController {
 	@RequestParam(value="max", required=false, defaultValue="10") int max){	
 		return ChartUtils.generateRandomChart(numXaxis, numYaxis, min, max);
 	}
+	
+	@RequestMapping("/ping")
+	public @ResponseBody void ping (){
+		return;
+	}
 }
