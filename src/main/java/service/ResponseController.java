@@ -11,7 +11,7 @@ import classes.Response;
 @RestController
 public class ResponseController {
 
-	@RequestMapping("/randomChart")
+	@RequestMapping("/chart/random")
 	public @ResponseBody Response randomChart 
 	(@RequestParam(value="numXaxis", required=true, defaultValue="3") int numXaxis,
 	@RequestParam(value="numYaxis", required=true, defaultValue="3") int numYaxis,		
@@ -21,7 +21,7 @@ public class ResponseController {
 	}
 	
 	@RequestMapping("/ping")
-	public @ResponseBody void ping (){
-		return;
+	public @ResponseBody boolean ping (){
+		return true;
 	}
 }
