@@ -1,7 +1,7 @@
-charts-js-rest
+res-spring
 ==============
 
-A REST service used by [charts-js](https://github.com/mmontes11/charts-js).
+A REST web service made with Spring.
 
 ## Installation
 
