@@ -1,4 +1,4 @@
-res-spring
+rest-spring
 ==============
 
 A REST web service made with Spring.
