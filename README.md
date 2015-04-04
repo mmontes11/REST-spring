@@ -8,6 +8,8 @@ It provides random charts in [Highcharts](http://www.highcharts.com/) compatible
 
 You need Maven 3 to start this app. Once you installed it, follow this steps:
 
-1. cd charts-js-rest
-2. mvn install
-3. mvn spring-boot:run
+```bash
+$ cd REST-spring
+$ mvn install
+$ mvn spring-boot:run
+```
