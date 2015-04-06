@@ -1,7 +1,7 @@
 REST-spring
 ==============
 
-A REST web service made with Spring.
+A REST web service developed with Spring.
 It provides random charts in [Highcharts](http://www.highcharts.com/) compatible format. 
 
 ## Installation
